@@ -8,7 +8,7 @@ from random import shuffle
 from collections import deque
 from multiprocessing import Pool
 from datetime import datetime
-from model import model
+from similarity_model import model
 from PIL import Image
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
