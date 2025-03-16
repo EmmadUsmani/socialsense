@@ -17,6 +17,10 @@ CORS(app)
 images = {}
 """Base64 encoded strings of images the user wants to predict popularity for. Key is a unique id."""
 
+@app.route('/')
+def index():
+    return 'Hello, World!'
+
 @app.route('/add_image', methods=['POST'])
 def add_image():
     req_body = request.get_json(force=True)
@@ -120,3 +124,6 @@ def close_server():
 
 
 atexit.register(close_server)
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=3001)
