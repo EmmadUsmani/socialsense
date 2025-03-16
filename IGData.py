@@ -93,6 +93,7 @@ def initialize_drivers():
     driver_options = Options()
     if not visible:
         driver_options.add_argument('--headless')
+    driver_options.binary_location = '/Applications/Chromium.app/Contents/MacOS/Chromium'
     drivers = [Chrome('./chromedriver', options=driver_options) for _ in range(pool_size)]
 
 
